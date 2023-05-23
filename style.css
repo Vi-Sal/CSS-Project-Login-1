@@ -1,0 +1,156 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: "Poppins", sans-serif;
+	height: 100vh;
+	padding: 50px;
+}
+.form-container {
+	max-width: 1000px;
+	height: 600px;
+	margin: 50px auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	overflow: hidden;
+}
+.form-info {
+	/* background-color: gray; */
+	padding: 50px;
+	position: relative;
+	display: block;
+}
+.form-info > h1 {
+	margin: 10px;
+}
+.form-info > p {
+	margin: 10px 0;
+}
+.input,
+.btn {
+	width: 100%;
+	height: 40px;
+	margin: 10px 0;
+	border-radius: 5px;
+	border: none;
+	outline: 1px solid gray;
+	font-size: 1rem;
+}
+.btn {
+	background-color: white;
+}
+.btn-sign-in {
+	background-color: indigo;
+	color: white;
+}
+.btn-sign-in-google {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+.btn-sign-in-google > img {
+	height: 50%;
+}
+.input {
+	padding-left: 20px;
+}
+label {
+	display: block;
+	margin: 5px 0;
+}
+label > input {
+	margin-right: 5px;
+}
+label > .forgot-pw {
+	position: absolute;
+	right: 50px;
+}
+label > .sign-up {
+	margin-left: 20px;
+}
+label:last-child {
+	margin-top: 20px;
+	text-align: center;
+}
+.form-style {
+	background-color: whitesmoke;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+.circle {
+	width: 200px;
+	height: 200px;
+	background-color: indigo;
+	border-radius: 100%;
+}
+.blur-bg {
+	width: 100%;
+	height: 50%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	backdrop-filter: blur(15px);
+	background-color: rgba(245, 245, 245, 0.2);
+}
+
+@media screen and (max-width: 920px) {
+	.form-container {
+		grid-template-columns: 1fr;
+		height: auto;
+	}
+	.form-style {
+		/* background-color: red; */
+		grid-row: 1;
+	}
+	.circle {
+		transform: scale(0.5);
+	}
+}
+@media screen and (max-width: 580px) {
+	.form-container{
+		margin: 30px auto;
+	}
+	.form-info {
+		padding: 20px;
+	}
+	label > .forgot-pw {
+		right: 20px;
+	}
+	.circle {
+		transform: scale(0.4);
+	}
+}
+@media screen and (max-width: 450px) {
+	body {
+		padding: 10px 20px;
+	}
+	.form-container{
+		margin: 20px auto;
+	}
+	.input,
+	.btn {
+		height: 35px;
+	}
+	.form-info > h1 {
+		font-size: 1.5rem;
+	}
+	.input {
+		font-size: 0.9rem;
+	}
+	.btn,
+	p,
+	label,
+	a {
+		font-size: 0.8rem;
+	}
+	label > .forgot-pw {
+		font-size: 0.7rem;
+	}
+}
